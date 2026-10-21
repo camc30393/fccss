@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Christian Alexis Manzanares Cruz">
+<title>Rediseño del sitio web FCCSS · Tres propuestas</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#243C90;--azp:#14235A;--oro:#FCBE1E;--cian:#5B9BE0;--verde:#70B144;--gris:#55606F;--niebla:#F2F5F9;--linea:#D8DEE8}
+*{box-sizing:border-box}body{margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1B2433;background:var(--niebla);line-height:1.5}
+header{background:var(--azp);color:#fff;padding:44px 24px 40px;text-align:center;border-bottom:6px solid var(--oro)}
+header img{width:84px;height:84px}
+header p.k{color:var(--oro);font-weight:700;letter-spacing:1.4px;text-transform:uppercase;font-size:13px;margin:14px 0 0}
+h1{font-family:'Roboto Condensed',sans-serif;font-size:46px;line-height:1.02;margin:8px 0 0}
+header p.l{color:#C9D4E8;max-width:760px;margin:14px auto 0;font-size:17px}
+main{max-width:1240px;margin:0 auto;padding:28px 16px 60px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 0 26px}
+.facts span{background:#fff;border:1px solid var(--linea);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:700;color:var(--azul)}
+.card{display:grid;grid-template-columns:1.25fr 1fr;gap:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(20,35,90,.08);margin-bottom:22px}
+.shot{position:relative;display:block;background:var(--azp);min-height:300px}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.shot img.m{position:absolute;right:16px;bottom:16px;width:22%;height:auto;border-radius:14px;border:4px solid #fff;box-shadow:0 10px 26px rgba(0,0,0,.4)}
+.tx{padding:26px 28px}
+.tx h2{font-family:'Roboto Condensed',sans-serif;font-size:32px;color:var(--azul);margin:0}
+.tx p{color:var(--gris);margin:8px 0 0}
+.tx ul{margin:14px 0 0;padding-left:18px}.tx li{margin:4px 0;font-size:15px}
+.ok{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:#2F6B1E;background:#EAF4E3;border-radius:999px;padding:4px 10px}
+.btn{display:inline-block;margin-top:16px;background:var(--oro);color:var(--azp);font-weight:700;text-decoration:none;padding:11px 18px;border-radius:8px}
+.tx nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tx nav a{font-size:13px;font-weight:600;color:var(--azul);background:var(--niebla);border-radius:999px;padding:4px 10px;text-decoration:none}
+.tx nav a:hover{background:var(--oro)}
+.note{background:#fff;border-left:5px solid var(--cian);border-radius:0 12px 12px 0;padding:18px 22px;color:#1B2433;font-size:15px}
+footer{text-align:center;color:var(--gris);font-size:13px;padding:0 16px 40px}
+@media (max-width:860px){.card{grid-template-columns:1fr}h1{font-size:34px}}
+</style></head><body>
+<header><img src="media/logos/Logo_FCCSS_200.png" alt="Escudo de la Facultad de Ciencias Sociales">
+<p class="k">Facultad de Ciencias Sociales · UNAH</p><h1>Rediseño del sitio web: tres propuestas</h1>
+<p class="l">Mismo contenido, mismas siete páginas y mismos enlaces; cambia solo la línea gráfica. Elija una propuesta y recórrala: la barra superior permite saltar a la misma página en las otras dos.</p></header>
+<main>
+<div class="facts"><span>7 páginas por propuesta</span><span>Todo a 3 clics o menos (incluido el teléfono)</span><span>Colores del escudo de la Facultad · tipografía del Manual UNAH</span><span>Portada Portada ≤ 0.75 MBlt; 0.8 MB</span><span>Sin contenidos que caduquen: agenda en Google Calendar</span></div>
+<article class="card">
+  <a class="shot" href="A_editorial/01_inicio.html"><img src="capturas/A_editorial_escritorio.jpg" alt="Portada de la propuesta A · Editorial institucional en escritorio"><img class="m" src="capturas/A_editorial_movil.jpg" alt="Portada en teléfono"></a>
+  <div class="tx"><h2>A · Editorial institucional</h2><p>Sobria y editorial: azul y oro del manual UNAH, fotografía con fundido lento y tipografía serif de acento que evoca memoria y patrimonio.</p>
+  <ul><li>Banner dividido: texto sobre azul profundo y fotografía con fundido lento</li><li>Titulares de diapositiva en serif (Libre Baskerville, acento del manual UNAH)</li><li>Encabezados interiores blancos con filete oro</li><li>Microanimaciones una sola vez (sin bucles)</li></ul>
+  <span class="ok">Máx. 3 clics · 358 elementos auditados</span>
+  <a class="btn" href="A_editorial/01_inicio.html">Ver la propuesta A</a>
+  <nav><a href="A_editorial/01_inicio.html">Inicio</a><a href="A_editorial/02_la_facultad.html">La Facultad</a><a href="A_editorial/03_estudia_con_nosotros.html">Estudia con nosotros</a><a href="A_editorial/04_estudiantes.html">Estudiantes</a><a href="A_editorial/05_investigacion_y_vinculacion.html">Investigación y vinculación</a><a href="A_editorial/06_publicaciones.html">Publicaciones</a><a href="A_editorial/07_contacto.html">Contacto</a></nav></div>
+</article><article class="card">
+  <a class="shot" href="B_narrativa/01_inicio.html"><img src="capturas/B_narrativa_escritorio.jpg" alt="Portada de la propuesta B · Narrativa animada en escritorio"><img class="m" src="capturas/B_narrativa_movil.jpg" alt="Portada en teléfono"></a>
+  <div class="tx"><h2>B · Narrativa animada</h2><p>Inspirada en la Escuela de Biología: fondo azul profundo, brillos cian y oro, microanimaciones por diapositiva y pantalla de carga breve.</p>
+  <ul><li>Pantalla de carga breve (1.3 s, una vez por sesión)</li><li>Portada en azul profundo con brillos cian y oro</li><li>Microgestos en bucle por diapositiva y secciones que aparecen al desplazar</li><li>Pestañas tipo píldora sobre fondo oscuro</li></ul>
+  <span class="ok">Máx. 3 clics · 358 elementos auditados</span>
+  <a class="btn" href="B_narrativa/01_inicio.html">Ver la propuesta B</a>
+  <nav><a href="B_narrativa/01_inicio.html">Inicio</a><a href="B_narrativa/02_la_facultad.html">La Facultad</a><a href="B_narrativa/03_estudia_con_nosotros.html">Estudia con nosotros</a><a href="B_narrativa/04_estudiantes.html">Estudiantes</a><a href="B_narrativa/05_investigacion_y_vinculacion.html">Investigación y vinculación</a><a href="B_narrativa/06_publicaciones.html">Publicaciones</a><a href="B_narrativa/07_contacto.html">Contacto</a></nav></div>
+</article><article class="card">
+  <a class="shot" href="C_modular/01_inicio.html"><img src="capturas/C_modular_escritorio.jpg" alt="Portada de la propuesta C · Modular contemporánea en escritorio"><img class="m" src="capturas/C_modular_movil.jpg" alt="Portada en teléfono"></a>
+  <div class="tx"><h2>C · Modular contemporánea</h2><p>Mosaico de tarjetas sobre fondo claro: las cuatro piezas del banner siempre visibles, color por categoría y lectura rápida en móvil.</p>
+  <ul><li>Banner en mosaico 2×2: las cuatro piezas siempre visibles, sin carrusel</li><li>Tarjetas redondeadas sobre fondo claro, color por categoría</li><li>Cifras con color por tipo</li><li>Lectura rápida y vertical en el teléfono</li></ul>
+  <span class="ok">Máx. 3 clics · 358 elementos auditados</span>
+  <a class="btn" href="C_modular/01_inicio.html">Ver la propuesta C</a>
+  <nav><a href="C_modular/01_inicio.html">Inicio</a><a href="C_modular/02_la_facultad.html">La Facultad</a><a href="C_modular/03_estudia_con_nosotros.html">Estudia con nosotros</a><a href="C_modular/04_estudiantes.html">Estudiantes</a><a href="C_modular/05_investigacion_y_vinculacion.html">Investigación y vinculación</a><a href="C_modular/06_publicaciones.html">Publicaciones</a><a href="C_modular/07_contacto.html">Contacto</a></nav></div>
+</article>
+<p class="note"><b>Nota para la revisión.</b> <a href="documentos/Propuesta_Rediseno_Sitio_Web_FCCSS_v3.pdf">Descargar la propuesta completa (PDF)</a>. El «Mensaje de la Decana» es una propuesta de texto por validar y su fotografía oficial está pendiente. Las fotografías provienen de la página de Facebook de la Facultad. Esta es una demostración: Los enlaces entre páginas son relativos y, al migrar al portal de la UNAH, se generan con las direcciones definitivas.</p>
+</main>
+<footer>Propuesta elaborada por Christian Alexis Manzanares Cruz · IIS/OBSAN, FCCSS-UNAH · Octubre de 2026</footer>
+</body></html>
