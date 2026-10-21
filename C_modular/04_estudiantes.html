@@ -8,10 +8,15 @@
 <style>body{margin:0;background:#E9EDF3}</style>
 </head>
 <body>
-<!-- Barra de presentación de propuestas (solo vista local; no forma parte del bloque copiable) -->
-<div style="position:sticky;top:0;z-index:2147483600;background:#14235A;color:#fff;font:600 13.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;padding:8px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center">
-  <a href="../index.html" style="color:#C9D4E8;text-decoration:none;margin-right:6px">&#8592; Índice de propuestas</a> <a href="../A_editorial/04_estudiantes.html" style="color:#fff;background:transparent;border:1px solid rgba(255,255,255,.5);padding:4px 10px;border-radius:999px;text-decoration:none;font-weight:700">A · Editorial institucional</a> <a href="../B_narrativa/04_estudiantes.html" style="color:#fff;background:transparent;border:1px solid rgba(255,255,255,.5);padding:4px 10px;border-radius:999px;text-decoration:none;font-weight:700">B · Narrativa animada</a> <a href="../C_modular/04_estudiantes.html" style="color:#14235A;background:#FCBE1E;border:1px solid rgba(255,255,255,.5);padding:4px 10px;border-radius:999px;text-decoration:none;font-weight:700">C · Modular contemporánea</a>
-</div>
+<!-- Barra de presentación de propuestas (solo demostración; NO forma parte del bloque copiable) -->
+<style>
+.fcs-demo{background:#14235A;color:#fff;font:600 13.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;padding:7px 12px;display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
+.fcs-demo a{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.45);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.fcs-demo a.on{background:#FCBE1E;color:#14235A;border-color:#FCBE1E}
+.fcs-demo a.ix{border:0;color:#C9D4E8}
+@media (max-width:640px){.fcs-demo{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;gap:6px;padding:6px 10px}.fcs-demo span{display:none}.fcs-demo a{padding:4px 12px}}
+</style>
+<nav class="fcs-demo" aria-label="Cambiar de propuesta"><a class="ix" href="../index.html">&#8592; Propuestas</a><a class="" href="../A_editorial/04_estudiantes.html"><b>A</b><span> · Editorial institucional</span></a><a class="" href="../B_narrativa/04_estudiantes.html"><b>B</b><span> · Narrativa animada</span></a><a class="on" href="../C_modular/04_estudiantes.html"><b>C</b><span> · Modular contemporánea</span></a></nav>
 
 <!-- ▼ INICIO BLOQUE COPIABLE AL CMS ▼ -->
 <!-- Página: Estudiantes · Facultad de Ciencias Sociales, UNAH · Rediseño 2027 · Línea gráfica C · Modular contemporánea -->
@@ -33,9 +38,9 @@
 <style>.fcs{--azul:#243C90;--azul-2:#2A5BA8;--azul-p:#14235A;--oro:#FCBE1E;--oro-claro:#FFF5D9;--oro-ink:#7A5600;--verde:#3D7F27;--verde-claro:#EAF4E3;--verde-2:#70B144;--sol:#B4560F;--naranja:#F49739;--cian:#5B9BE0;--celeste:#A9C6EE;--tinta:#1B2433;--gris:#55606F;--niebla:#F2F5F9;--linea:#D8DEE8;--f-tit:'Roboto Condensed','Helvetica Neue Condensed','Arial Narrow',sans-serif;--f-txt:'Helvetica Neue',Helvetica,Arial,sans-serif;--f-ser:'Libre Baskerville',Baskerville,'Book Antiqua',Georgia,serif}
 .fcs{font-family:var(--f-txt);color:var(--tinta);font-size:17px;line-height:1.55;max-width:1140px;margin:0 auto;-webkit-font-smoothing:antialiased;position:relative}
 .fcs *,.fcs *::before,.fcs *::after{box-sizing:border-box}
-.fcs h1,.fcs h2,.fcs h3,.fcs h4{font-family:var(--f-tit);font-weight:700;line-height:1.08;margin:0;color:var(--azul);letter-spacing:0}
-.fcs p{margin:0}
-.fcs ul,.fcs ol{margin:0;padding:0}
+:where(.fcs) :where(h1,h2,h3,h4){font-family:var(--f-tit);font-weight:700;line-height:1.08;margin:0;color:var(--azul);letter-spacing:0}
+:where(.fcs) p{margin:0}
+:where(.fcs) :where(ul,ol){margin:0;padding:0}
 .fcs a{color:var(--azul-2)}
 .fcs img{max-width:100%}
 .fcs a:focus-visible,.fcs button:focus-visible,.fcs input:focus-visible,.fcs select:focus-visible{outline:3px solid var(--oro);outline-offset:3px}
@@ -94,7 +99,7 @@
 .fcs-list li:last-child{border-bottom:1px solid var(--linea)}
 .fcs-list .t{font-weight:700}
 .fcs-list .m{font-size:14.5px;color:var(--gris)}
-.fcs-doc{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:15px;text-decoration:none}
+.fcs-doc{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:15px;text-decoration:none;padding:6px 0;white-space:nowrap}
 .fcs-doc:hover{text-decoration:underline}
 .fcs-doc svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
 .fcs-docs{display:inline-flex;gap:16px;flex-wrap:wrap}
