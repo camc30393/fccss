@@ -20,16 +20,19 @@
 
 <!-- ▼ INICIO BLOQUE COPIABLE AL CMS ▼ -->
 <!-- Página: Contacto · Facultad de Ciencias Sociales, UNAH · Rediseño 2027 · Línea gráfica B · Narrativa animada -->
-<!-- Google Analytics: escriba el ID de medición de la Facultad en GA_ID (formato G-XXXXXXXXXX). Vacío = no se carga. -->
+<!-- Google Analytics 4 (gtag.js): equivale al fragmento oficial de Google, cargado desde el bloque para que el editor del portal no lo altere.
+     ID de medición en GA_ID. Vacío = no se carga. Eventos propios: fcs_pestana, fcs_ventana, fcs_documento, fcs_navegacion. -->
 <script>
 (function(){
-  var GA_ID='';
+  var GA_ID='G-30K9899J8C';
   if(!GA_ID) return;
   var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
   document.head.appendChild(s);
   window.dataLayer=window.dataLayer||[];
-  window.gtag=function(){ window.dataLayer.push(arguments); };
-  window.gtag('js', new Date()); window.gtag('config', GA_ID);
+  window.gtag=window.gtag||function(){ window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', GA_ID, { linea_grafica: 'B_narrativa' });
+  window.fcsEvento=function(n,p){ try{ window.gtag('event', n, p||{}); }catch(e){} };
 })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -353,6 +356,7 @@
   tabs.forEach(function(t,i){
     t.addEventListener('click',function(){
       var s=t.getAttribute('data-tab'); open(s,false);
+      if(window.fcsEvento) window.fcsEvento('fcs_pestana',{pestana:s, pagina:document.title});
       if(history.replaceState) history.replaceState(null,'','#'+s);
     });
     t.addEventListener('keydown',function(e){
@@ -385,6 +389,7 @@
 (function(){
   var last=null;
   function openM(id){
+    if(window.fcsEvento) window.fcsEvento('fcs_ventana',{ventana:id, pagina:document.title});
     var m=document.getElementById(id); if(!m) return;
     last=document.activeElement; m.classList.add('on'); m.removeAttribute('hidden');
     document.documentElement.style.overflow='hidden';
@@ -414,6 +419,14 @@
     [].slice.call(document.querySelectorAll('.fcs-modal.on')).forEach(closeM);
   });
   window.fcsOpenModal=openM;
+  /* Medición: documentos y atajos de navegación (si Google Analytics está activo) */
+  document.addEventListener('click',function(e){
+    if(!window.fcsEvento||!e.target.closest) return;
+    var d=e.target.closest('a.fcs-doc');
+    if(d){ window.fcsEvento('fcs_documento',{accion:(d.textContent||'').trim(), enlace:d.getAttribute('href')}); return; }
+    var n=e.target.closest('.fcs-fab-panel a, .fcs-mapa-g a, .fcs-ruta a');
+    if(n){ var o=n.closest('.fcs-fab-panel')?'boton_flotante':(n.closest('.fcs-mapa-g')?'mapa_del_sitio':'rutas_por_publico'); window.fcsEvento('fcs_navegacion',{origen:o, destino:n.getAttribute('href')}); }
+  });
 })();
 </script>
 <script>

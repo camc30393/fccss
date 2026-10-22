@@ -2,6 +2,8 @@
 
 Tres propuestas de diseño (A · Editorial institucional, B · Narrativa animada, C · Modular contemporánea) con **el mismo contenido**: siete páginas, todo a tres clics o menos desde la portada.
 
+**Demostración publicada:** https://camc30393.github.io/fccss/
+
 **Inicio de la demostración:** `index.html`
 
 ## Contenido de esta carpeta
@@ -20,7 +22,7 @@ Tres propuestas de diseño (A · Editorial institucional, B · Narrativa animada
 
 1. Cree un repositorio (por ejemplo, `fccss-rediseno`) y suba **todo el contenido de esta carpeta** a la raíz de la rama `main` (incluido `.nojekyll`).
 2. En el repositorio: **Settings › Pages › Build and deployment › Source: Deploy from a branch**, rama `main`, carpeta `/ (root)`.
-3. En uno o dos minutos la demostración estará en `https://<usuario>.github.io/fccss-rediseno/`.
+3. En uno o dos minutos la demostración estará en `https://<usuario>.github.io/<repositorio>/` (publicación actual: https://camc30393.github.io/fccss/).
 
 Todos los enlaces son relativos, por lo que la demostración funciona con cualquier nombre de repositorio y también abriendo `index.html` desde el equipo.
 
