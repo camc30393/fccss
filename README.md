@@ -1,6 +1,6 @@
 # Rediseño del sitio web de la Facultad de Ciencias Sociales (UNAH) · Demostración
 
-Tres propuestas de diseño (A · Editorial institucional, B · Narrativa animada, C · Modular contemporánea) con **el mismo contenido**: siete páginas, todo a tres clics o menos desde la portada.
+Tres propuestas de diseño (A · Vitrina académica, B · Narrativa nocturna, C · Modular contemporánea) con **el mismo contenido**: siete páginas, todo a tres clics o menos desde la portada.
 
 **Demostración publicada:** https://camc30393.github.io/fccss/
 
@@ -11,7 +11,7 @@ Tres propuestas de diseño (A · Editorial institucional, B · Narrativa animada
 | Ruta | Qué es |
 |---|---|
 | `index.html` | Selector para presentar y comparar las tres propuestas |
-| `A_editorial/`, `B_narrativa/`, `C_modular/` | Las siete páginas de cada propuesta |
+| `A_vitrina/`, `B_narrativa/`, `C_modular/` | Las siete páginas de cada propuesta |
 | `media/` | Fotografías, escudos y logotipos que usan las páginas |
 | `capturas/` | Capturas de cada propuesta (computadora, teléfono y ventana emergente) |
 | `documentos/` | Propuesta de rediseño en PDF |
